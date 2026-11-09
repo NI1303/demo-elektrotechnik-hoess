@@ -1,0 +1,23 @@
+/* Premium-Schicht: Intro (Hauptschalter klappt hoch, „Strom an“), Phasen-Anzeige als Kapitel-Anzeige */
+.intro{display:none}
+html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;cursor:pointer;overflow:hidden;background:#0d141c;animation:introFailsafe .01s 4s forwards,lightOn .3s .75s forwards;transition:opacity .6s,transform .7s cubic-bezier(.7,0,.25,1)}
+@keyframes introFailsafe{to{visibility:hidden;pointer-events:none}}
+@keyframes lightOn{to{background:#f4f5f1}}
+.intro-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.i-switch{position:relative;width:70px;height:120px;border-radius:8px;background:#e9ebe6;box-shadow:inset 0 0 0 2px #9aa0a6}
+.i-switch span{position:absolute;left:14px;right:14px;height:44px;bottom:12px;border-radius:5px;background:#3a4450;animation:flip .35s .45s cubic-bezier(.3,1.5,.5,1) forwards}
+@keyframes flip{to{bottom:64px;background:#1d5fa8}}
+.intro-name{margin:1.2rem 0 0;font:900 clamp(2.2rem,7vw,3.6rem)/1 var(--disp);color:#16202b;letter-spacing:-.02em;opacity:0;animation:nbIn .4s .8s forwards}
+.intro-sub{margin:.4rem 0 0;font:400 1.8rem/1 var(--hand);color:#1d5fa8;opacity:0;animation:nbIn .4s 1s forwards}
+@keyframes nbIn{to{opacity:1}}
+.intro-skip{position:absolute;right:1.4rem;bottom:1.4rem;background:#16202b;border:1px solid #9fb3c8;color:#f4f5f1;font:500 .9rem/1 var(--body);padding:.8rem 1.1rem;border-radius:4px;cursor:pointer}
+html.intro-out .intro{opacity:0;transform:translateY(-4%);pointer-events:none}
+
+.phase-ind{position:fixed;left:1.2rem;bottom:1.4rem;z-index:30;display:flex;align-items:center;gap:.55rem;background:#16202b;color:#fff;padding:.45rem .8rem .45rem .6rem;border-radius:4px;opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s var(--ease);pointer-events:none;box-shadow:0 8px 20px -10px rgba(0,0,0,.5)}
+.pi-led{width:9px;height:9px;border-radius:50%;background:#3fbf4a;box-shadow:0 0 8px 2px rgba(63,191,74,.7)}
+.pi-no{font-size:.8rem;color:var(--gelb)}
+.pi-l{font:500 .9rem/1 var(--body)}
+.phase-ind.show{opacity:1;transform:none}
+.phase-ind.over-hero,.phase-ind.over-foot{opacity:0;transform:translateY(10px)}
+@media (max-width:1279px){.phase-ind{display:none}}
+@media (prefers-reduced-motion:reduce){.intro{display:none!important}}

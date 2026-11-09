@@ -1,0 +1,596 @@
+{
+ "version": 1,
+ "site": "https://www.elektro.hoess.buchenegg.de/",
+ "title": "Elektrotechnik Höß",
+ "assistantName": "Demo-Assistent",
+ "launcherLabel": "Fragen?",
+ "avatar": "img/favicon.svg",
+ "placeholder": "z. B. Plant ihr Brandmeldeanlagen?",
+ "demoNote": "Demo-Assistent · antwortet nur mit Inhalten der bisherigen Website · sendet nichts",
+ "theme": {
+  "accent": "#16202b",
+  "accent-d": "#0d141c",
+  "ink": "#16202b",
+  "paper": "#f4f5f1",
+  "gold": "#f2c200",
+  "font": "'Red Hat Text', system-ui, sans-serif",
+  "serif": "'Red Hat Display', system-ui, sans-serif"
+ },
+ "greeting": "Grüß Gott! Ich bin der Demo-Assistent von Elektrotechnik Höß. Fragen Sie mich nach Leistungen – von CAD/CAE über KNX und Photovoltaik bis Brandmeldeanlagen – oder nach Kontakt und Anfahrt.",
+ "chips": [
+  {
+   "label": "Leistungen"
+  },
+  {
+   "label": "Sicherheitstechnik"
+  },
+  {
+   "label": "Wo finde ich euch?"
+  },
+  {
+   "label": "Kontakt"
+  }
+ ],
+ "stopwords": [
+  "haben",
+  "habt",
+  "gibt",
+  "gibts",
+  "ihre",
+  "euch",
+  "eure",
+  "eine",
+  "einen",
+  "auch",
+  "kann",
+  "koennen",
+  "welche",
+  "bitte",
+  "danke",
+  "hallo",
+  "noch",
+  "sind",
+  "seid",
+  "mich",
+  "uns",
+  "ihnen",
+  "moechte",
+  "gerne",
+  "fuer",
+  "mein",
+  "meine",
+  "ich",
+  "wir",
+  "macht",
+  "machen",
+  "plant",
+  "ihr"
+ ],
+ "intents": [
+  {
+   "id": "greet",
+   "weight": 1,
+   "keywords": [
+    "hallo",
+    "servus",
+    "gruess gott",
+    "guten tag",
+    "moin",
+    "hi"
+   ],
+   "answer": "Grüß Gott! Womit kann ich helfen?",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Leistungen"
+    },
+    {
+     "label": "Sicherheitstechnik"
+    },
+    {
+     "label": "Wo finde ich euch?"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "thanks",
+   "weight": 1,
+   "keywords": [
+    "danke",
+    "vielen dank",
+    "super",
+    "perfekt"
+   ],
+   "answer": "Gern geschehen!",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Leistungen"
+    },
+    {
+     "label": "Sicherheitstechnik"
+    },
+    {
+     "label": "Wo finde ich euch?"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "leistungen",
+   "weight": 2,
+   "keywords": [
+    "leistungen",
+    "leistung",
+    "angebot",
+    "was macht",
+    "was machen",
+    "taetigkeit",
+    "service",
+    "uebersicht"
+   ],
+   "answer": "**Leistungen** im Überblick:\n- **Konstruktion:** CAD, CAE (Schaltpläne bis 1000 VAC / 1200 A)\n- **Software:** SPS (Siemens Logo!, Wago/CoDeSys), KNX\n- **Installation:** Niederspannung, Photovoltaik, Steuerung, TK-Anlagen, Netzwerk, Antennen\n- **Sicherheit:** Zutrittskontrolle, Rauchwarn-, Gefahrenmelde-, Brandmelde-, Einbruchmelde-, Sprachalarmanlagen, Ex/ATEX\n- **Service:** Patientenrufanlagen",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "konstruktion",
+   "weight": 3,
+   "keywords": [
+    "cad",
+    "cae",
+    "konstruktion",
+    "zeichnung",
+    "grundriss",
+    "schaltplan",
+    "plaene",
+    "planung",
+    "verteilung",
+    "schaltschrank",
+    "laufkarte",
+    "feuerwehrlaufkarte"
+   ],
+   "answer": "**Konstruktion:** CAD (Grundrisse, Detailzeichnungen, Pläne für Sicherheitssysteme, Feuerwehrlaufkarten nach DIN 14675 und TAB) und CAE (Schaltpläne bis 1000 VAC und 1200 A, Verteilungen, Schaltschränke, Leitungen/Verlegearten, Automationssysteme).",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "software",
+   "weight": 3,
+   "keywords": [
+    "sps",
+    "logo",
+    "siemens",
+    "wago",
+    "codesys",
+    "knx",
+    "bus",
+    "bussystem",
+    "programmieren",
+    "programmierung",
+    "smarthome",
+    "smart home",
+    "gebaeudeautomation",
+    "steuerung"
+   ],
+   "answer": "**Software & Steuerung:** SPS-Programmierung – Kleinsteuerungen wie Siemens Logo!, modulare Steuerungen wie Wago per CoDeSys – und KNX-Bussysteme für Gebäude. Dazu Planung und Errichtung von Steuerungs- und Automatisierungsanlagen.",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "installation",
+   "weight": 3,
+   "keywords": [
+    "installation",
+    "elektroinstallation",
+    "hausinstallation",
+    "neubau",
+    "sanierung",
+    "steckdose",
+    "leitung",
+    "niederspannung",
+    "elektriker",
+    "pruefung",
+    "pruefen",
+    "messen",
+    "vde",
+    "e check",
+    "echeck",
+    "dguv"
+   ],
+   "answer": "**Installation & Prüfung:** Gebäudeinstallation, Steuerungs- und Automationssysteme. Prüfen und Messen nach Norm: ortsfeste Installation gemäß **DIN VDE 0100**, ortsveränderliche Geräte gemäß **DIN VDE 0701/0702**.",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "pv",
+   "weight": 3,
+   "keywords": [
+    "photovoltaik",
+    "pv",
+    "solar",
+    "solaranlage",
+    "pv anlage"
+   ],
+   "answer": "**Photovoltaik:** Planung und Errichtung von Photovoltaiksystemen. Details zu Größe, Speicher und Preisen bitte direkt besprechen.",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "tk",
+   "weight": 3,
+   "keywords": [
+    "telefon anlage",
+    "telefonanlage",
+    "tk anlage",
+    "tk",
+    "panasonic",
+    "agfeo",
+    "auerswald",
+    "netzwerk",
+    "lan",
+    "wlan",
+    "server",
+    "serverschrank",
+    "router",
+    "switch",
+    "antenne",
+    "sat",
+    "satellit",
+    "breitband"
+   ],
+   "answer": "**Kommunikation & Netzwerk:** TK-Anlagen von Panasonic, Agfeo und Auerswald; Netzwerkinstallationen, Serverschränke, Router und Switches; Antennenanlagen (terrestrisch, Satellit – auch mehrere Satelliten – und Breitband).",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "sicherheit",
+   "weight": 3,
+   "keywords": [
+    "sicherheit",
+    "sicherheitstechnik",
+    "brandmelde",
+    "brandmeldeanlage",
+    "bma",
+    "rauchmelder",
+    "rauchwarn",
+    "einbruch",
+    "einbruchmelde",
+    "alarmanlage",
+    "ema",
+    "zutritt",
+    "zutrittskontrolle",
+    "telenot",
+    "jacky",
+    "hekatron",
+    "sprachalarm",
+    "ela",
+    "saa",
+    "gefahrenmelde",
+    "vds",
+    "din 14675",
+    "atex",
+    "ex"
+   ],
+   "answer": "**Sicherheitstechnik:**\n- Zutrittskontrolle (Telenot, Jacky)\n- Brandwarnanlagen/Rauchwarnmelder (Hekatron)\n- Gefahrenmeldeanlagen (Telenot)\n- Brandmeldeanlagen – Planung, Feuerwehrlaufkarten, geprüft gemäß DIN 14675 und VdS 2095\n- Einbruchmeldeanlagen – geprüft gemäß VdS 2311\n- Sprachalarmierung (SAA/ELA) – DIN 14675\n- Berechnung von Ex- und ATEX-Installationen",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "service",
+   "weight": 3,
+   "keywords": [
+    "patientenruf",
+    "pra",
+    "ackermann",
+    "pflege",
+    "klinik",
+    "lichtruf"
+   ],
+   "answer": "**Service:** Patientenrufanlagen – Systeme von Ackermann.",
+   "links": [
+    {
+     "label": "Zum Verteiler (Leistungen)",
+     "href": "#leistungen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "address",
+   "weight": 3,
+   "keywords": [
+    "adresse",
+    "anfahrt",
+    "wo seid",
+    "wo sind",
+    "wo ist",
+    "wo liegt",
+    "wie komme",
+    "route",
+    "navi",
+    "finden",
+    "wo finde",
+    "finde ich",
+    "wo finden",
+    "standort",
+    "anschrift",
+    "buchenegg",
+    "steibis"
+   ],
+   "answer": "**Elektrotechnik Höß**\nBuchenegg 2a\n87534 Oberstaufen",
+   "links": [
+    {
+     "label": "Route (OpenStreetMap)",
+     "href": "https://www.openstreetmap.org/?mlat=47.537392&mlon=10.0424449#map=17/47.537392/10.0424449"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Leistungen"
+    },
+    {
+     "label": "Sicherheitstechnik"
+    },
+    {
+     "label": "Wo finde ich euch?"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "contact",
+   "weight": 2,
+   "keywords": [
+    "telefon",
+    "anrufen",
+    "nummer",
+    "erreichen",
+    "kontakt",
+    "email",
+    "e mail",
+    "mail",
+    "fax",
+    "handy",
+    "mobil",
+    "anfrage",
+    "angebot",
+    "termin"
+   ],
+   "answer": "**Kontakt**\nTel.: 08386 9393871\nMobil: 0171 8281535\nFax: 08386 9393870\nE-Mail: Poststelle@elektro.hoess.buchenegg.de",
+   "links": [
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    },
+    {
+     "label": "Mobil 0171 8281535",
+     "href": "tel:+491718281535"
+    },
+    {
+     "label": "E-Mail schreiben",
+     "href": "mailto:Poststelle@elektro.hoess.buchenegg.de"
+    },
+    {
+     "label": "Zur Anfrage",
+     "href": "#kontakt"
+    }
+   ]
+  },
+  {
+   "id": "jobs",
+   "weight": 3,
+   "keywords": [
+    "job",
+    "stelle",
+    "stellen",
+    "karriere",
+    "arbeiten",
+    "bewerben",
+    "bewerbung",
+    "monteur",
+    "techniker",
+    "ausbildung",
+    "azubi"
+   ],
+   "answer": "**Stellenangebote:** Für Techniker & Monteure gibt es derzeit leider keine freien Stellen. Ob Initiativbewerbungen willkommen sind, bitte direkt erfragen.",
+   "links": [
+    {
+     "label": "Zu den Stellen",
+     "href": "#stellen"
+    },
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "koop",
+   "weight": 3,
+   "keywords": [
+    "kooperation",
+    "partner",
+    "teledat",
+    "kempten"
+   ],
+   "answer": "**Kooperation:** Teledat GmbH, Duracher Straße 11, 87437 Kempten (www.teledat.net).",
+   "links": [
+    {
+     "label": "Referenzen & Kooperation",
+     "href": "#referenzen"
+    }
+   ]
+  },
+  {
+   "id": "firma",
+   "weight": 2,
+   "keywords": [
+    "inhaber",
+    "chef",
+    "hoess",
+    "georg",
+    "seit wann",
+    "gegruendet",
+    "meister",
+    "qualitaet",
+    "projektbetreuer"
+   ],
+   "answer": "Inhaber ist **Georg Höß**. Qualität steht an erster Stelle – mit ständiger Weiterbildung und einem Projektbetreuer für Ihr Vorhaben. Seit wann es den Betrieb gibt, steht nicht auf der Website.",
+   "links": [
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    }
+   ]
+  },
+  {
+   "id": "unknown",
+   "weight": 4,
+   "keywords": [
+    "preis",
+    "preise",
+    "kostet",
+    "kosten",
+    "notdienst",
+    "notfall",
+    "oeffnungszeiten",
+    "buerozeiten",
+    "wann",
+    "foerderung",
+    "wallbox",
+    "e auto",
+    "ladestation",
+    "waermepumpe"
+   ],
+   "answer": "Dazu steht auf der bisherigen Website nichts – das klärt Herr Höß am besten direkt: **08386 9393871** oder mobil **0171 8281535**.",
+   "links": [
+    {
+     "label": "08386 9393871 anrufen",
+     "href": "tel:+4983869393871"
+    },
+    {
+     "label": "Mobil 0171 8281535",
+     "href": "tel:+491718281535"
+    },
+    {
+     "label": "Zur Anfrage",
+     "href": "#kontakt"
+    }
+   ]
+  }
+ ],
+ "menu": {
+  "foundPrefix": "",
+  "links": [],
+  "followChips": [],
+  "sections": []
+ },
+ "fallback": {
+  "text": "Das kann ich leider nicht sicher beantworten – ich kenne nur die Inhalte der Website (Leistungen, Kooperation, Stellen, Kontakt). Rufen Sie gern an: **08386 9393871**.",
+  "links": [
+   {
+    "label": "08386 9393871 anrufen",
+    "href": "tel:+4983869393871"
+   },
+   {
+    "label": "Zur Anfrage",
+    "href": "#kontakt"
+   }
+  ]
+ },
+ "handoff": {
+  "tel": "+4983869393871",
+  "telLabel": "08386 9393871",
+  "mail": "Poststelle@elektro.hoess.buchenegg.de",
+  "text": "Lieber persönlich?"
+ }
+}

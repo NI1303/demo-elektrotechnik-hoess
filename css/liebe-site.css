@@ -1,0 +1,13 @@
+/* Elektrotechnik Höß – liebevolle Details (Verteilerkasten). Wird von liebe_inject.py nicht überschrieben. */
+:root{--lv-hand:'Grace','Segoe Print',cursive;--lv-ink:#1d5fa8;--lv-ul:#1d5fa8;--lv-tex-o:.25;--lv-note-fs:1.4rem;--lv-ul-w:230px;--lv-egg-fs:1.3rem}
+.arbeit,.stellen,.footer{--lv-ink:#f2c200;--lv-ul:#f2c200}
+.verteiler{position:relative}
+.footer .foot-top{position:relative}
+.lv-egg-hauptschalter .lv-hs{transition:y .25s cubic-bezier(.3,1.5,.5,1),fill .2s}
+.lv-egg-hauptschalter.lv-egg-on .lv-hs{y:30px;fill:#5b6570}
+body.lv-dark main,body.lv-dark .site-header{filter:brightness(.35);transition:filter .4s}
+body main,body .site-header{transition:filter .6s}
+.lv-egg-hauptschalter .lv-egg-msg{position:absolute;left:100%;top:50%;translate:0 -50%;width:15rem;margin-left:.8rem}
+@media (max-width:899px){.lv-egg-hauptschalter .lv-egg-msg{left:auto;right:0;top:100%;translate:0 .5rem;width:min(13rem,calc(100vw - 3rem));text-align:right;background:#223142;padding:.5rem .7rem;border-radius:4px}}
+.lv-404{--lv-404-bg:#f4f5f1;--lv-404-ink:#16202b;--lv-404-accent:#1d5fa8;--lv-404-font:'Red Hat Text',system-ui,sans-serif;--lv-404-display:'Red Hat Display',system-ui,sans-serif;--lv-404-r:4px;--lv-404-hw:900}
+.lv-404-art{color:#1d5fa8}
