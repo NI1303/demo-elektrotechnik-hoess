@@ -263,6 +263,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .brks{background:repeating-linear-gradient(180deg,transparent 0 46px,#b5b9b2 46px 74px,transparent 74px 110px) 0 8px/100% 110px;margin:0 -.4rem;padding:8px .4rem}
 }
 @media (max-width:440px){.brand-t small{display:none}}
+.phases .l3{background:#5f6469}
 
 /* css/premium.css */
 /* Premium-Schicht: Intro (Hauptschalter klappt hoch, „Strom an“), Phasen-Anzeige als Kapitel-Anzeige */
